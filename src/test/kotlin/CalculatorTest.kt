@@ -23,7 +23,7 @@ class CalculatorTest {
     @Test
     fun additionTestCase3(){
         val result = calculator.addition(-100,-200)
-        assertEquals(-30,result)
+        assertEquals(-300,result)
     }
 
 
