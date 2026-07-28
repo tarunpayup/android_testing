@@ -13,6 +13,7 @@ dependencies {
 // Kotlin Testing Library  // JUnit Library testImplementation("junit:junit:4.13.2")
     testImplementation(kotlin("test"))
     testImplementation("junit:junit:4.13.2")
+    testImplementation("org.junit.jupiter:junit-jupiter-params:5.10.2")
 
 }
 
