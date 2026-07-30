@@ -1,0 +1,110 @@
+Assignment 1: Employee Repository
+interface EmployeeRepository {
+
+    fun getEmployeeName(
+        employeeId: Int
+    ): String?
+
+}
+
+class EmployeeService(
+
+    private val repository: EmployeeRepository
+
+) {
+
+    fun getEmployeeDetails(
+        employeeId: Int
+    ): String {
+
+        val name = repository.getEmployeeName(employeeId)
+
+        return name ?: "Employee Not Found"
+
+    }
+
+}
+Assignment 2: Product Repository
+interface ProductRepository {
+
+    fun getProductName(
+        productId: Int
+    ): String?
+
+}
+
+class ProductService(
+
+    private val repository: ProductRepository
+
+) {
+
+    fun getProduct(
+        productId: Int
+    ): String {
+
+        return repository.getProductName(productId)
+            ?: "Product Not Available"
+
+    }
+
+}
+Assignment 3: Book Repository
+interface BookRepository {
+
+    fun getBookTitle(
+        isbn: String
+    ): String?
+
+}
+
+class BookService(
+
+    private val repository: BookRepository
+
+) {
+
+    fun searchBook(
+        isbn: String
+    ): String {
+
+        return repository.getBookTitle(isbn)
+            ?: "Book Not Found"
+
+    }
+
+}
+Assignment 4: Course Repository
+interface CourseRepository {
+
+    fun getCourseName(
+        courseId: Int
+    ): String?
+
+}
+
+class CourseService(
+
+    private val repository: CourseRepository
+
+) {
+
+    fun searchCourse(
+        courseId: Int
+    ): String {
+
+        return repository.getCourseName(courseId)
+            ?: "Course Not Available"
+
+    }
+
+}
+
+Students should write Unit Tests using:
+
+mock()
+whenever()
+verify()
+assertEquals()
+
+for both successful and unsuccessful scenarios.
